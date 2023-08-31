@@ -1,0 +1,165 @@
+======= Q2  ========================================
+
+
+
+Q2
+
+Testing LMMcoefficients for FE (q=1, beta0=1)
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for BE (q=1, beta0=0)
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for q=2 beta0=1
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for q=2 beta0=0.5
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for BDF2 (q=2, beta0=0)
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for BDF4 (q=4, beta0=0)
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+Testing LMMcoefficients for q=5 beta0=0.2
+LMMcoefficients outputs correct values of alpha vector.
+LMMcoefficients outputs correct values of beta vector.
+
+LMMcoefficients outputs alpha and beta vectors of correct output dimensions for all tests (when it has not crashed).
+
+======= Q3  ========================================
+
+
+
+Q3 Correctness Tests
+
+Test 1 of 7: FE (q=1, beta0=1) (alpha=[-1.00  1.00], beta=[1.00  0.00]), H=[1,2;2,1], U0=[1;1], T=1.0, N=100
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+Test 2 of 7: BE (q=1, beta0=0) (alpha=[-1.00  1.00], beta=[0.00  1.00]), H from Q4, U0=y0 from Q4, T=1.0, N=50
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+Test 3 of 7: q=2 beta0=1 (alpha=[-1.50  2.00 -0.50], beta=[1.00  0.00  0.00]), H=1, U0=1, T=1.0, N=100
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives incorrect intermediate output values for normt
+LMMsolve gives correct final output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Final output values were correct.
+
+Test 4 of 7: q=2 beta0=0.5 (alpha=[-0.50  0.00  0.50], beta=[0.50  0.00  0.50]), H=[1,2;2,1], U0=[1;1], T=1.0, N=100
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+Test 5 of 7: BDF2 (q=2, beta0=0) (alpha=[0.50 -2.00  1.50], beta=[0.00  0.00  1.00]), H from Q4, U0=y0 from Q4, T=1.0, N=50
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+Test 6 of 7: BDF4 (q=4, beta0=0) (alpha=[0.25 -1.33  3.00 -4.00  2.08], beta=[0.00  0.00  0.00  0.00  1.00]), H=1, U0=1, T=1.0, N=50
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+Test 7 of 7: q=5 beta0=0.2 (alpha=[-0.62  2.00 -3.67  4.67 -4.25  1.87], beta=[0.20  0.00  0.00  0.00  0.00  0.80]), H=[1,2;2,1], U0=[1;1], T=1.0, N=100
+LMMsolve gives correct intermediate output values for Ut
+LMMsolve gives correct intermediate output values for normt
+LMMsolve gives correct intermediate output values for Qt
+LMMsolve gives correct intermediate output values for t
+LMMsolve runs successfully and outputs were of correct dimensions.
+Intermediate output values were correct.
+Final output values were correct.
+
+LMMsolve outputs Ut of correct output dimensions for all tests.
+LMMsolve outputs normt of correct output dimensions for all tests.
+LMMsolve outputs Qt of correct output dimensions for all tests.
+LMMsolve outputs t of correct output dimensions for all tests.
+
+Q3 Efficiency Tests
+
+Efficiency test 1 of 2: Sparse H, U0=[1,0,...,0], d=200, T.R. (q=1, beta0 = 0.5) (alpha=[-1.00  1.00], beta=[0.50  0.50]), T=1.00, N=1000
+LMMsolve gives correct final output values for Ut
+Efficiency test 2 of 2: Sparse H, U0=[1,0,...,0], d=2000, T.R. (q=1, beta0 = 0.5) (alpha=[-1.00  1.00], beta=[0.50  0.50]), T=0.01, N=50
+LMMsolve took too long and timed out.\n
+
+======= Q4 a ========================================
+
+
+
+Q4a startingvalues
+
+Test 1 of 7: FE (q=1, beta0=1) (alpha=[-1.00  1.00], beta=[1.00  0.00]), H=[1,2;2,1], U0=[1;1], h=1.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 2 of 7: BE (q=1, beta0=0) (alpha=[-1.00  1.00], beta=[0.00  1.00]), H from Q4, U0=y0 from Q4, h=2.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 3 of 7: q=2 beta0=1 (alpha=[-1.50  2.00 -0.50], beta=[1.00  0.00  0.00]), H=1, U0=1, h=1.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 4 of 7: q=2 beta0=0.5 (alpha=[-0.50  0.00  0.50], beta=[0.50  0.00  0.50]), H=[1,2;2,1], U0=[1;1], h=1.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 5 of 7: BDF2 (q=2, beta0=0) (alpha=[0.50 -2.00  1.50], beta=[0.00  0.00  1.00]), H from Q4, U0=y0 from Q4, h=2.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 6 of 7: BDF4 (q=4, beta0=0) (alpha=[0.25 -1.33  3.00 -4.00  2.08], beta=[0.00  0.00  0.00  0.00  1.00]), H=1, U0=1, h=2.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+Test 7 of 7: q=5 beta0=0.2 (alpha=[-0.62  2.00 -3.67  4.67 -4.25  1.87], beta=[0.20  0.00  0.00  0.00  0.00  0.80]), H=[1,2;2,1], U0=[1;1], h=1.00e-02
+startingvalues runs successfully and outputs were of correct dimensions.
+startingvalues gives correct output values for Ustartingvalues
+
+======= Marks Breakdown for Harry Lyness =======
+
+Total: 23.0 /25.
+Q1.a): 1.0 /1.
+Q1.b): 1.0 /1.
+Q1.c): 2.0 /2.
+Q1.d): 1.5 /1.14
+Q1.e): 0.5 /1.14
+Q2): 3.0 /3.
+Q3): 7.0 /8.
+Q4.a): 1.0 /1.
+Q4.b): 3.0 /3.
+Q4.c): 1.0 /1.
+Q4.d): 2.0 /2.
